@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MWG_BlueSport_WebApp", "MWG_BlueSport_WebApp\MWG_BlueSport_WebApp.csproj", "{CACA3DB1-35D4-4CEF-B54A-73A77CC0F440}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CACA3DB1-35D4-4CEF-B54A-73A77CC0F440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CACA3DB1-35D4-4CEF-B54A-73A77CC0F440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CACA3DB1-35D4-4CEF-B54A-73A77CC0F440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CACA3DB1-35D4-4CEF-B54A-73A77CC0F440}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CF80B2F-7DEB-4035-A623-8227A432C98D}
+	EndGlobalSection
+EndGlobal
