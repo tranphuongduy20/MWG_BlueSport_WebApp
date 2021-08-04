@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using MWG_BlueSport_WebApp.Service.Banner;
+using MWG_BlueSport_WebApp.Service.Category;
 using MWG_BlueSport_WebApp.Service.Product;
 using MWG_BlueSport_WebApp.Service.Store;
 
@@ -16,13 +17,15 @@ namespace MWG_BlueSport_WebApp.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IBannerService _bannerService;
+        private readonly ICategoryService _categoryService;
         private readonly IStoreService _storeService;
         private readonly IProductService _productService;
 
-        public HomeController(ILogger<HomeController> logger, IBannerService bannerService, IStoreService storeService, IProductService productService)
+        public HomeController(ILogger<HomeController> logger, IBannerService bannerService, IStoreService storeService, IProductService productService, ICategoryService categoryService)
         {
             _logger = logger;
             _bannerService = bannerService;
+            _categoryService = categoryService;
             _productService = productService;
             _storeService = storeService;
         }
@@ -31,6 +34,7 @@ namespace MWG_BlueSport_WebApp.Controllers
         {
             HomeViewModel homeViewModel = new HomeViewModel();
             homeViewModel.bannerModels = _bannerService.GetAll();
+            homeViewModel._categories = _categoryService.GetAll();
             homeViewModel.storeModels = _storeService.GetAll();
             homeViewModel.productModels = _productService.GetAll();
             return View(homeViewModel);

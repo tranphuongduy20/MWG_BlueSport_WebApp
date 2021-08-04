@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace MWG_BlueSport_WebApp.Models
 {
-    public class ProductDetailViewModel
+    public class ProductDetailViewModel : BaseViewModel
     {
         public ProductModel _productModel { get; set; }
         public List<ProductModel> _relatedProducts { get; set; }

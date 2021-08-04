@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model BaseViewModel
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +16,7 @@
 <body>
     <div class="bgcover"></div>
     <!-- Header -->
-    @Html.Partial("Common/_PartialHeader");
+    @Html.Partial("Common/_PartialHeader", Model._categories);
 
     @RenderBody();
 

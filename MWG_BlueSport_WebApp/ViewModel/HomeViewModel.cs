@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace MWG_BlueSport_WebApp.Models
 {
-    public class HomeViewModel
+    public class HomeViewModel : BaseViewModel
     {
         public List<BannerModel> bannerModels { get; set; }
         public List<StoreModel> storeModels { get; set; }
