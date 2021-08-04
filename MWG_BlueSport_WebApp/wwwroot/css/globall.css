@@ -22,7 +22,7 @@ ul, ol {
   clear: both;
 }
 .clearfix {
-	display: block;
+  display: block;
 }
 .clearfix:after {
   content: "";
@@ -71,7 +71,7 @@ section{
   width: 30px;
   line-height: 30px;
   vertical-align: middle;
-  background-size: 300px 150px
+  background-size: 300px 200px
 }
 .icon-logo {
   background-position: 0 0;
@@ -168,7 +168,81 @@ section{
   height: 21px;
   width: 19px;
 }
-
+.icon-search-error {
+  background-position: -235px -80px;
+  height: 32px;
+  width: 32px;
+}
+.icon-doitra {
+  background-position: -75px -80px;
+  height: 23px;
+  width: 23px;
+}
+.icon-mienphigh {
+  background-position: -105px -80px;
+  height: 23px;
+  width: 28px;
+}
+.icon-cod {
+  background-position: -140px -80px;
+  height: 21px;
+  width: 23px;
+}
+.icon-phone {
+  background-position: -170px -80px;
+  height: 24px;
+  width: 21px;
+}
+.icon-size {
+  background-position: -265px -40px;
+  height: 12px;
+  width: 22px;
+}
+.icon-giattay {
+  background-position: 0 -150px;
+  height: 21px;
+  width: 28px;
+}
+.icon-ui {
+  background-position: -35px -150px;
+  height: 13px;
+  width: 23px;
+}
+.icon-say {
+  background-position: -65px -150px;
+  height: 16px;
+  width: 16px;
+}
+.icon-giatkho {
+  background-position: -85px -150px;
+  height: 18px;
+  width: 18px;
+}
+.icon-giatmay {
+  background-position: -110px -150px;
+  height: 21px;
+  width: 24px;
+}
+.icon-closepopup {
+  background-position: -280px -85px;
+  height: 14px;
+  width: 14px;
+}
+.icon-map {
+  background-position: -265px -55px;
+  height: 20px;
+  width: 18px;
+}
+.icon-filter {
+  background-position: -280px 0;
+  height: 15px;
+  width: 14px;
+}
+.icon-clear-selected {
+  background-position: -285px -105px;
+  height: 9px;
+  width: 9px;
+}
 /*----------- / ICON ----------*/
 
 .taC {
@@ -181,6 +255,16 @@ section{
   left: 0;
   position: fixed;
   top: 100px;
+  width: 100%;
+  z-index: 2;
+}
+.bgcover-full {
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  display: none;
+  left: 0;
+  position: fixed;
+  top: 0;
   width: 100%;
   z-index: 2;
 }
@@ -205,7 +289,7 @@ section{
   position: absolute;
   transition: .3s;
 }
-.header__address a:hover::before, 
+.header__address a:hover::before,
 .header__address a:hover::after {
   right: -8px;
 }
@@ -778,10 +862,8 @@ section{
 
 /*----------- BREADCRUMB  ----------*/
 .breadcrumb {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
-  margin-bottom: 10px;
-  padding: 5px 10px;
+  padding: 10px 0;
 }
 .breadcrumb li {
   font-size: 14px;

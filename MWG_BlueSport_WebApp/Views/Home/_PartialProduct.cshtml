@@ -4,14 +4,14 @@
     @{ foreach (var item in Model)
                     {
         <div class="item">
-            <a href="#">
+            <a asp-action="Detail" asp-controller="ProductDetail" asp-route-slug="@item.slug">
                 <div class="item-wrap">
                     <div class="item-label">
                         <span class="lb-percent">@item.saleOff</span>
                         <span class="lb-tragop">Góp 0%</span>
                     </div>
                     <div class="item-img">
-                        <img src="@item.image" alt="@item.name">
+                        <img src="~/@item.image" alt="@item.name">
                     </div>
                 </div>
                 <h3><span>@item.brandName</span> @item.name </h3>

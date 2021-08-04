@@ -9,5 +9,7 @@ namespace MWG_BlueSport_WebApp.Service.Product
     public interface IProductService
     {
         public List<ProductModel> GetAll();
+        public ProductModel Get(string id);
+        public ProductModel GetBySlug(string slug);
     }
 }

@@ -1,3 +1,17 @@
+.counter {
+    background-color: rgba(0,0,0,0.5);
+    bottom: 0;
+    border-radius: 40px;
+    color: #FFF;
+    font-size: 13px;
+    line-height: 17px;
+    position: absolute;
+    padding: 3px 0;
+    right: 0;
+    text-align: center;
+    width: 40px;
+    z-index: 1;
+}
 
 .banner {
     color: #FFF;
@@ -153,12 +167,29 @@
     margin-top: -10px;
 }
 
+.market-neighbor {
+    margin: 80px 0 130px;
+}
+.market-neighbor-ttl {
+    background-color: #F2F2F2;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 100px 35px;
+    padding: 24px 20px;
+}
+.market-neighbor .market-list li {
+    margin-bottom: 50px;
+}
+
+
 .market-bottom {
     display: flex;
     margin: 100px 0;
 }
 
-.market-slider {
+.market-bottom-left {
+    position: relative;
     width: 57.5%;
 }
 .market-slider a {
@@ -202,15 +233,8 @@
 .market-slider.owl-carousel .owl-nav button.owl-next {
     right: 0;
 }
-.slider-counter {
-    background-color: rgba(0, 0, 0, 0.5);
-    bottom: 15px;
-    border-radius: 40px;
-    color: #FFF;
-    font-size: 13px;
-    line-height: 17px;
-    position: absolute;
-    padding: 3px 11px;
+.market-bottom .counter {
+    bottom: 25px;
     right: 15px;
 }
 
@@ -224,7 +248,6 @@
     font-weight: bold;
     font-family: 'Roboto Condensed', sans-serif;
     line-height: 26px;
-    padding: 0 10px;
 }
 .utilities__list {
     margin-top: 10px;
@@ -255,45 +278,28 @@
     width: 24px;
 }
 
-.back-page {
-    color: #1D41A6;
-    display: block;
-    position: relative;
-    padding: 15px 40px;
+
+.detail {
+    display: flex;
+    margin-top: 20px;
 }
-.back-page::before, .back-page::after {
-    content: '';
-    position: absolute;
+.detail__left {
+    padding-right: 20px;
+    width: calc(100% - 390px);
 }
-.back-page::before {
-    background-color: #1D41A6;
-    height: 1px;
-    left: 15px;
-    top: 23px;
-    width: 15px;
-}
-.back-page::after {
-    border-top: 1px solid #1D41A6;
-    border-left: 1px solid #1D41A6;
-    height: 6px;
-    left: 15px;
-    top: 20px;
-    transform: rotate(-45deg);
-    width: 6px;
+.detail__right {
+    padding-top: 40px;
+    width: 390px;
 }
 .detail-name {
     font-size: 18px;
     font-weight: bold;
     font-family: 'Roboto Condensed', sans-serif;
-    line-height: 21px;
-    margin: 5px 10px 0;
+    line-height: 24px;
     text-transform: uppercase;
 }
-.detail-show {
-    margin: 20px 10px 0;
-}
 .detail-show .item {
-    margin-bottom: 12px;
+    margin-bottom: 20px;
 }
 .detail-show .txt01 {
     font-weight: bold;
@@ -307,13 +313,18 @@
     color: #1D41A6;
     font-weight: bold;
 }
+.detail .utilities {
+    margin-top: 35px;
+    padding-left: 0;
+    width: 100%;
+}
 
 .detail-map {
-    padding: 0 10px;
+    margin-top: 20px;
 }
 .detail-map iframe {
     border: 1px solid #222 !important;
-    height: 230px;
+    height: 535px;
     width: 100%;
 }
 .detail-map-btn {
@@ -323,21 +334,48 @@
     font-weight: bold;
     font-family: 'Roboto Condensed', sans-serif;
     line-height: 16px;
-    margin-top: 10px;
+    max-width: 340px;
+    margin: 35px auto 0;
     padding: 9px;
     text-align: center;
 }
+.detail-map-btn:hover {
+    background-color: #222;
+    color: #FFF;
+}
+
+.detail-promo-txt {
+    margin-top: 200px;
+}
+.detail-promo-txt h3 {
+    font-size: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 24px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.detail-promo-txt p {
+    color: #000;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 22px;
+}
+
 
 .detail-img {
     margin-top: 20px;
     position: relative;
 }
+.detail-img .counter {
+    bottom: 10px;
+    right: 10px;
+}
 .detail-img-ttl {
     font-size: 18px;
     font-weight: bold;
     font-family: 'Roboto Condensed', sans-serif;
-    line-height: 21px;
-    padding: 0 10px;
+    line-height: 24px;
+    text-align: center;
 }
 .detail-img-slider {
     margin-top: 10px;
@@ -345,18 +383,14 @@
 .detail-img-slider img {
     display: block;
 }
-.detail-img .counter {
-    background-color: rgba(0,0,0,0.5);
-    bottom: 5px;
-    border-radius: 40px;
-    color: #FFF;
-    font-size: 13px;
-    line-height: 17px;
-    position: absolute;
-    padding: 3px 0;
-    right: 5px;
-    text-align: center;
-    width: 40px;
-    z-index: 1;
+.detail-img-slider .owl-nav {
+    top: calc(50% - 18px);
 }
+.detail-img-slider.owl-carousel .owl-nav button.owl-prev {
+    left: 0;
+}
+.detail-img-slider.owl-carousel .owl-nav button.owl-next {
+    right: 0;
+}
+
 
