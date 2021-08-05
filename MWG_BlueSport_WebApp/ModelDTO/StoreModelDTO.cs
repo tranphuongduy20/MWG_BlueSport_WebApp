@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using MWG_BlueSport_WebApp.Models;
 
 namespace MWG_BlueSport_WebApp.ModelDTO
@@ -10,8 +11,13 @@ namespace MWG_BlueSport_WebApp.ModelDTO
     {
         public string id { get; set; }
         public string name { get; set; }
+        public string slug { get; set; }
         public string address { get; set; }
         public string webAddress { get; set; }
+        public string operatingTime { get; set; }
+        public long phoneNumber { get; set; }
+        public List<string> promotion { get; set; }
+        public List<string> images { get; set; }
     }
 
     public static class StoreModelDTOExt
@@ -21,7 +27,12 @@ namespace MWG_BlueSport_WebApp.ModelDTO
             return new StoreModel()
             {
                 name = storeModelDTO.name,
+                slug = storeModelDTO.slug,
                 address = storeModelDTO.GetAddress(),
+                operatingTime = storeModelDTO.operatingTime,
+                phoneNumber = storeModelDTO.phoneNumber,
+                promotion = storeModelDTO.promotion,
+                images = storeModelDTO.images
             };
         }
         

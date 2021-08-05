@@ -37,7 +37,32 @@
             <li><a href="#">DỤNG CỤ</a></li>
         </ul>
 
-        @Html.Partial("_PartialProduct", Model.productModels);
+        <div class="listproduct listproduct-block owl-carousel">
+            @{
+                foreach (var item in @Model.productModels)
+                {
+                    <div class="item">
+                        <a href="#">
+                            <div class="item-wrap">
+                                <div class="item-label">
+                                    <span class="lb-percent">@item.saleOff</span>
+                                    <span class="lb-tragop">Góp 0%</span>
+                                </div>
+                                <div class="item-img">
+                                    <img src="~/@item.image" alt="ADIDAS Adizero Takumi Sen 7 Tokyo">
+                                </div>
+                            </div>
+                            <h3><span>@item.brandName</span>  @item.name </h3>
+                            <div class="price">
+                                <p class="price-current">@item.priceCurrent</p>
+                                <p class="price-old">@item.priceOld</p>
+                            </div>
+                        </a>
+                    </div>
+                }
+            }
+
+        </div>
 
         <a href="#" class="c-btn c-btn-white">
             <span>XEM TẤT CẢ GIÀY DÉP NAM</span>
@@ -56,7 +81,32 @@
             <li><a href="#">DỤNG CỤ</a></li>
         </ul>
 
-        @Html.Partial("_PartialProduct", Model.productModels);
+        <div class="listproduct listproduct-block owl-carousel">
+            @{
+                foreach (var item in @Model.productModels)
+                {
+                    <div class="item">
+                        <a href="#">
+                            <div class="item-wrap">
+                                <div class="item-label">
+                                    <span class="lb-percent">@item.saleOff</span>
+                                    <span class="lb-tragop">Góp 0%</span>
+                                </div>
+                                <div class="item-img">
+                                    <img src="~/@item.image" alt="ADIDAS Adizero Takumi Sen 7 Tokyo">
+                                </div>
+                            </div>
+                            <h3><span>@item.brandName</span>  @item.name </h3>
+                            <div class="price">
+                                <p class="price-current">@item.priceCurrent</p>
+                                <p class="price-old">@item.priceOld</p>
+                            </div>
+                        </a>
+                    </div>
+                }
+            }
+
+        </div>
 
         <a href="#" class="c-btn c-btn-white">
             <span>XEM TẤT CẢ ÁO - QUẦN NỮ</span>
@@ -75,7 +125,32 @@
             <li><a href="#">DỤNG CỤ</a></li>
         </ul>
 
-        @Html.Partial("_PartialProduct", Model.productModels);
+        <div class="listproduct listproduct-block owl-carousel">
+            @{
+                foreach (var item in @Model.productModels)
+                {
+                    <div class="item">
+                        <a href="#">
+                            <div class="item-wrap">
+                                <div class="item-label">
+                                    <span class="lb-percent">@item.saleOff</span>
+                                    <span class="lb-tragop">Góp 0%</span>
+                                </div>
+                                <div class="item-img">
+                                    <img src="~/@item.image" alt="ADIDAS Adizero Takumi Sen 7 Tokyo">
+                                </div>
+                            </div>
+                            <h3><span>@item.brandName</span>  @item.name </h3>
+                            <div class="price">
+                                <p class="price-current">@item.priceCurrent</p>
+                                <p class="price-old">@item.priceOld</p>
+                            </div>
+                        </a>
+                    </div>
+                }
+            }
+
+        </div>
 
         <a href="#" class="c-btn c-btn-white">
             <span>XEM TẤT CẢ GIÀY DÉP TRẺ EM</span>
@@ -94,8 +169,32 @@
             <li><a href="#">DỤNG CỤ</a></li>
         </ul>
 
-        @Html.Partial("_PartialProduct", Model.productModels);
+        <div class="listproduct listproduct-block owl-carousel">
+            @{
+                foreach (var item in @Model.productModels)
+                {
+                    <div class="item">
+                        <a href="#">
+                            <div class="item-wrap">
+                                <div class="item-label">
+                                    <span class="lb-percent">@item.saleOff</span>
+                                    <span class="lb-tragop">Góp 0%</span>
+                                </div>
+                                <div class="item-img">
+                                    <img src="~/@item.image" alt="ADIDAS Adizero Takumi Sen 7 Tokyo">
+                                </div>
+                            </div>
+                            <h3><span>@item.brandName</span>  @item.name </h3>
+                            <div class="price">
+                                <p class="price-current">@item.priceCurrent</p>
+                                <p class="price-old">@item.priceOld</p>
+                            </div>
+                        </a>
+                    </div>
+                }
+            }
 
+        </div>
         <a href="#" class="c-btn c-btn-white">
             <span>XEM TẤT CẢ XE ĐẠP NỔI BẬT</span>
         </a>
@@ -113,7 +212,31 @@
             <li><a href="#">DỤNG CỤ</a></li>
         </ul>
 
-        @Html.Partial("_PartialProduct", Model.productModels);
+        <div class="listproduct listproduct-block owl-carousel">
+            @{
+                foreach (var item in @Model.productModels)
+                {
+                    <div class="item">
+                        <a href="#">
+                            <div class="item-wrap">
+                                <div class="item-label">
+                                    <span class="lb-percent">@item.saleOff</span>
+                                    <span class="lb-tragop">Góp 0%</span>
+                                </div>
+                                <div class="item-img">
+                                    <img src="~/@item.image" alt="ADIDAS Adizero Takumi Sen 7 Tokyo">
+                                </div>
+                            </div>
+                            <h3><span>@item.brandName</span>  @item.name </h3>
+                            <div class="price">
+                                <p class="price-current">@item.priceCurrent</p>
+                                <p class="price-old">@item.priceOld</p>
+                            </div>
+                        </a>
+                    </div>
+                }
+            }
+        </div>
 
         <a href="#" class="c-btn c-btn-white">
             <span>XEM TẤT CẢ CÁC CHẠY BỘ</span>
@@ -165,7 +288,7 @@
                     @{
                         foreach (var item in Model.storeModels)
                         {
-                            <a href="#" class="item">
+                            <a asp-action="Detail" asp-controller="Store" asp-route-slug="@item.slug" class="item">
                                 <p class="txt-name">@item.name</p>
                                 <div class="txt-address">
                                     <p>@item.address</p>
@@ -174,8 +297,6 @@
                             </a>
                         }
                     }
-
-
                 </div>
                 <a href="javascript:void(0)" class="visit-btn">
                     <span>XEM THÊM 9 SIÊU THỊ</span>

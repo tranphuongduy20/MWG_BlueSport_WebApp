@@ -9,5 +9,6 @@ namespace MWG_BlueSport_WebApp.Service.Store
     public interface IStoreService
     {
         public List<StoreModel> GetAll();
+        public StoreModel GetBySlug(string slug);
     }
 }
