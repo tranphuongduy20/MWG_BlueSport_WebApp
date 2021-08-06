@@ -56,6 +56,16 @@ namespace MWG_BlueSport_WebApp.ModelDTO
             }
 
             return result;
-        }    
+        }
+        //public static string ToCurrency(this float price)
+        //{
+        //    CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
+        //    return price.ToString("#,###", cul.NumberFormat) + "₫";
+        //}
+
+        //public static string ToPercent(this float saleOff)
+        //{
+        //    return '-' + (saleOff * 100).ToString() + '%';
+        //}
     }    
 }
