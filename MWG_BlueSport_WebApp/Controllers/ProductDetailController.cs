@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MWG_BlueSport_WebApp.Models;
-using MWG_BlueSport_WebApp.Service.Product;
-using MWG_BlueSport_WebApp.Service.Category;
+using MWG_BlueSport_WebApp.Services.Interface;
+using MWG_BlueSport_WebApp.Services.Category;
 
 namespace MWG_BlueSport_WebApp.Controllers
 {

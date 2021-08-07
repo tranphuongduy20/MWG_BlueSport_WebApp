@@ -1,9 +1,6 @@
-﻿using System;
+﻿using MWG_BlueSport_WebApp.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using MWG_BlueSport_WebApp.Models;
-using System.Drawing;
+using System.Globalization;
 
 namespace MWG_BlueSport_WebApp.ModelDTO
 {
@@ -13,9 +10,9 @@ namespace MWG_BlueSport_WebApp.ModelDTO
         public string slug { get; set; }
         public string name { get; set; }
         public string image { get; set; }
-        public string priceCurrent { get; set; }
-        public string priceOld { get; set; }
-        public string saleOff { get; set; }
+        public float priceCurrent { get; set; }
+        public float priceOld { get; set; }
+        public float saleOff { get; set; }
         public string brandName { get; set; }
         public string brandInfo { get; set; }
         public string description { get; set; }
@@ -34,9 +31,9 @@ namespace MWG_BlueSport_WebApp.ModelDTO
                 id = productModelDTO.id,
                 name = productModelDTO.name,
                 image = productModelDTO.image,
-                priceCurrent = productModelDTO.priceCurrent,
-                priceOld = productModelDTO.priceOld,
-                saleOff = productModelDTO.saleOff,
+                priceCurrent = productModelDTO.priceCurrent.ToCurrency(),
+                priceOld = productModelDTO.priceOld.ToCurrency(),
+                saleOff = productModelDTO.saleOff.ToPercent(),
                 brandName = productModelDTO.brandName,
                 brandInfo = productModelDTO.brandInfo,
                 description = productModelDTO.description,
@@ -57,15 +54,15 @@ namespace MWG_BlueSport_WebApp.ModelDTO
 
             return result;
         }
-        //public static string ToCurrency(this float price)
-        //{
-        //    CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
-        //    return price.ToString("#,###", cul.NumberFormat) + "₫";
-        //}
+        public static string ToCurrency(this float price)
+        {
+            CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
+            return price.ToString("#,###", cul.NumberFormat) + "₫";
+        }
 
-        //public static string ToPercent(this float saleOff)
-        //{
-        //    return '-' + (saleOff * 100).ToString() + '%';
-        //}
+        public static string ToPercent(this float saleOff)
+        {
+            return '-' + (saleOff * 100).ToString() + '%';
+        }
     }    
 }

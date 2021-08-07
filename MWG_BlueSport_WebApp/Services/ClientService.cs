@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 using RestSharp;
 using System.IO;
 using Microsoft.Extensions.Configuration;
+using MWG_BlueSport_WebApp.Services.Interface;
 
-namespace MWG_BlueSport_WebApp.Service.Client
+namespace MWG_BlueSport_WebApp.Services
 {
     public class ClientService : IClientService
     {

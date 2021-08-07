@@ -6,10 +6,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using MWG_BlueSport_WebApp.Service.Banner;
-using MWG_BlueSport_WebApp.Service.Category;
-using MWG_BlueSport_WebApp.Service.Product;
-using MWG_BlueSport_WebApp.Service.Store;
+using MWG_BlueSport_WebApp.Services.Interface;
+using MWG_BlueSport_WebApp.Services.Category;
 
 namespace MWG_BlueSport_WebApp.Controllers
 {

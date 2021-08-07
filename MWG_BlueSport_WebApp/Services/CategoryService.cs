@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using MWG_BlueSport_WebApp.Models;
 using MWG_BlueSport_WebApp.ModelDTO;
-using MWG_BlueSport_WebApp.Service.Client;
+using MWG_BlueSport_WebApp.Services.Interface;
 
-namespace MWG_BlueSport_WebApp.Service.Category
+namespace MWG_BlueSport_WebApp.Services.Category
 {
     public class CategoryService : ICategoryService
     {

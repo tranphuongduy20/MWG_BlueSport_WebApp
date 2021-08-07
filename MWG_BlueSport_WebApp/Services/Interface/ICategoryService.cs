@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using MWG_BlueSport_WebApp.ModelDTO;
 using MWG_BlueSport_WebApp.Models;
 
-namespace MWG_BlueSport_WebApp.Service.Category
+namespace MWG_BlueSport_WebApp.Services.Category
 {
     public interface ICategoryService
     {

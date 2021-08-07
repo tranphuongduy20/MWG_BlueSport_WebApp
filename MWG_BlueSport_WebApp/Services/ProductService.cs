@@ -5,10 +5,10 @@ using Newtonsoft.Json.Linq;
 using System.Threading.Tasks;
 using MWG_BlueSport_WebApp.Models;
 using MWG_BlueSport_WebApp.ModelDTO;
-using MWG_BlueSport_WebApp.Service.Client;
+using MWG_BlueSport_WebApp.Services.Interface;
 using RestSharp;
 
-namespace MWG_BlueSport_WebApp.Service.Product
+namespace MWG_BlueSport_WebApp.Services
 {
     public class ProductService : IProductService
     {

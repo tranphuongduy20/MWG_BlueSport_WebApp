@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MWG_BlueSport_WebApp.Service.Client;
+using MWG_BlueSport_WebApp.Services.Interface;
 using MWG_BlueSport_WebApp.Models;
 using MWG_BlueSport_WebApp.ModelDTO;
 using RestSharp;
 
-namespace MWG_BlueSport_WebApp.Service.Store
+namespace MWG_BlueSport_WebApp.Services
 {
     public class StoreService : IStoreService
     {

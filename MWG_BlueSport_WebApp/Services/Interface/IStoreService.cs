@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using MWG_BlueSport_WebApp.Models;
 
-namespace MWG_BlueSport_WebApp.Service.Store
+namespace MWG_BlueSport_WebApp.Services.Interface
 {
     public interface IStoreService
     {

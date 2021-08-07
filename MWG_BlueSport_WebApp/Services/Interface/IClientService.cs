@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using RestSharp;
 
-namespace MWG_BlueSport_WebApp.Service.Client
+namespace MWG_BlueSport_WebApp.Services.Interface
 {
     public interface IClientService
     {
