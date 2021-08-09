@@ -8,6 +8,6 @@ namespace MWG_BlueSport_WebApp.Services.Interface
 {
     public interface IClientService
     {
-        public IRestResponse Get(string path);
+        public Task<IRestResponse> Get(string path);
     }
 }

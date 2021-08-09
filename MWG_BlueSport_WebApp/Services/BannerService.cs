@@ -20,11 +20,11 @@ namespace MWG_BlueSport_WebApp.Services
 
             _apiName = "banner";
         }
-        public List<BannerModel> GetAll()
+        public async Task<List<BannerModel>> GetAll()
         {
             #region Get Data DTO => API
 
-            var response = _clientService.Get(_apiName);
+            var response = await _clientService.Get(_apiName);
 
             var dataDto = Newtonsoft.Json.JsonConvert.DeserializeObject<List<BannerModelDTO>>(response.Content);
             #endregion

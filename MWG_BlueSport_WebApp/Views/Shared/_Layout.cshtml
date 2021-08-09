@@ -15,12 +15,12 @@
 </head>
 <body>
     <div class="bgcover"></div>
-    <!-- Header -->
-    @Html.Partial("Common/_PartialHeader", Model._categories);
 
-    @RenderBody();
+    @await Component.InvokeAsync("HeaderComponent");
 
-    @Html.Partial("Common/_PartialFooter");
+    @RenderBody()
+
+    @Html.Partial("Common/_PartialFooter")
 
 </body>
 </html>

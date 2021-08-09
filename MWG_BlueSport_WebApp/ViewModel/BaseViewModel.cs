@@ -7,6 +7,5 @@ namespace MWG_BlueSport_WebApp.Models
 {
     public class BaseViewModel
     {
-        public List<CategoryModel> _categories { get; set; }
     }
 }

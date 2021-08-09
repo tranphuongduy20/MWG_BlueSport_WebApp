@@ -20,10 +20,10 @@ namespace MWG_BlueSport_WebApp.Services
 
             _apiName = "store";
         }
-        public List<StoreModel> GetAll()
+        public async Task<List<StoreModel>> GetAll()
         {
             #region Get Data DTO => API
-            var response = _clientService.Get(_apiName);
+            var response = await _clientService.Get(_apiName);
             var dataDto = Newtonsoft.Json.JsonConvert.DeserializeObject<List<StoreModelDTO>>(response.Content);
             #endregion
 
@@ -35,9 +35,9 @@ namespace MWG_BlueSport_WebApp.Services
 
             return storeModels;
         }
-        public StoreModel GetBySlug(string slug)
+        public async Task<StoreModel> GetBySlug(string slug)
         {
-            var response = _clientService.Get(_apiName + "/" + slug);
+            var response = await _clientService.Get(_apiName + "/" + slug);
             var dataDto = Newtonsoft.Json.JsonConvert.DeserializeObject<StoreModelDTO>(response.Content);
 
             return dataDto.ToStoreModel();

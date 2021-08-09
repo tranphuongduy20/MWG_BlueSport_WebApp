@@ -1,10 +1,8 @@
 ﻿@model HomeViewModel
-@{
-    ViewData["Title"] = "Trang chủ";
-}
-
-@Html.Partial("_PartialBanner", Model.bannerModels);
-
+@{ ViewData["Title"] = "Trang chủ"; }
+<!-- Banner common -->
+@await Component.InvokeAsync("BannerComponent", new { banners = Model.bannerModels })
+<!-- / Banner common -->
 <!-- Hot deal PROMO -->
 <div class="promo">
     <section>
@@ -17,9 +15,7 @@
             <li><a href="#">XE ĐẠP</a></li>
             <li><a href="#">CHẠY BỘ</a></li>
         </ul>
-
-        @Html.Partial("_PartialProduct", Model.productModels);
-
+        @await Component.InvokeAsync("ProductComponent", new { products = Model.productModels, whitebg = false })
     </section>
 </div>
 <!-- / Hot deal PROMO -->
@@ -36,34 +32,7 @@
             <li><a href="#">ÁO - QUẦN</a></li>
             <li><a href="#">DỤNG CỤ</a></li>
         </ul>
-
-        <div class="listproduct listproduct-block owl-carousel">
-            @{
-                foreach (var item in @Model.productModels)
-                {
-                    <div class="item">
-                        <a href="#">
-                            <div class="item-wrap">
-                                <div class="item-label">
-                                    <span class="lb-percent">@item.saleOff</span>
-                                    <span class="lb-tragop">Góp 0%</span>
-                                </div>
-                                <div class="item-img">
-                                    <img src="~/@item.image" alt="ADIDAS Adizero Takumi Sen 7 Tokyo">
-                                </div>
-                            </div>
-                            <h3><span>@item.brandName</span>  @item.name </h3>
-                            <div class="price">
-                                <p class="price-current">@item.priceCurrent</p>
-                                <p class="price-old">@item.priceOld</p>
-                            </div>
-                        </a>
-                    </div>
-                }
-            }
-
-        </div>
-
+        @await Component.InvokeAsync("ProductComponent", new { products = Model.productModels })
         <a href="#" class="c-btn c-btn-white">
             <span>XEM TẤT CẢ GIÀY DÉP NAM</span>
         </a>
@@ -80,34 +49,7 @@
             <li><a href="#">ÁO - QUẦN</a></li>
             <li><a href="#">DỤNG CỤ</a></li>
         </ul>
-
-        <div class="listproduct listproduct-block owl-carousel">
-            @{
-                foreach (var item in @Model.productModels)
-                {
-                    <div class="item">
-                        <a href="#">
-                            <div class="item-wrap">
-                                <div class="item-label">
-                                    <span class="lb-percent">@item.saleOff</span>
-                                    <span class="lb-tragop">Góp 0%</span>
-                                </div>
-                                <div class="item-img">
-                                    <img src="~/@item.image" alt="ADIDAS Adizero Takumi Sen 7 Tokyo">
-                                </div>
-                            </div>
-                            <h3><span>@item.brandName</span>  @item.name </h3>
-                            <div class="price">
-                                <p class="price-current">@item.priceCurrent</p>
-                                <p class="price-old">@item.priceOld</p>
-                            </div>
-                        </a>
-                    </div>
-                }
-            }
-
-        </div>
-
+        @await Component.InvokeAsync("ProductComponent", new { products = Model.productModels })
         <a href="#" class="c-btn c-btn-white">
             <span>XEM TẤT CẢ ÁO - QUẦN NỮ</span>
         </a>
@@ -124,34 +66,7 @@
             <li><a href="#">ÁO - QUẦN</a></li>
             <li><a href="#">DỤNG CỤ</a></li>
         </ul>
-
-        <div class="listproduct listproduct-block owl-carousel">
-            @{
-                foreach (var item in @Model.productModels)
-                {
-                    <div class="item">
-                        <a href="#">
-                            <div class="item-wrap">
-                                <div class="item-label">
-                                    <span class="lb-percent">@item.saleOff</span>
-                                    <span class="lb-tragop">Góp 0%</span>
-                                </div>
-                                <div class="item-img">
-                                    <img src="~/@item.image" alt="ADIDAS Adizero Takumi Sen 7 Tokyo">
-                                </div>
-                            </div>
-                            <h3><span>@item.brandName</span>  @item.name </h3>
-                            <div class="price">
-                                <p class="price-current">@item.priceCurrent</p>
-                                <p class="price-old">@item.priceOld</p>
-                            </div>
-                        </a>
-                    </div>
-                }
-            }
-
-        </div>
-
+        @await Component.InvokeAsync("ProductComponent", new { products = Model.productModels })
         <a href="#" class="c-btn c-btn-white">
             <span>XEM TẤT CẢ GIÀY DÉP TRẺ EM</span>
         </a>
@@ -168,33 +83,7 @@
             <li><a href="#">ÁO - QUẦN</a></li>
             <li><a href="#">DỤNG CỤ</a></li>
         </ul>
-
-        <div class="listproduct listproduct-block owl-carousel">
-            @{
-                foreach (var item in @Model.productModels)
-                {
-                    <div class="item">
-                        <a href="#">
-                            <div class="item-wrap">
-                                <div class="item-label">
-                                    <span class="lb-percent">@item.saleOff</span>
-                                    <span class="lb-tragop">Góp 0%</span>
-                                </div>
-                                <div class="item-img">
-                                    <img src="~/@item.image" alt="ADIDAS Adizero Takumi Sen 7 Tokyo">
-                                </div>
-                            </div>
-                            <h3><span>@item.brandName</span>  @item.name </h3>
-                            <div class="price">
-                                <p class="price-current">@item.priceCurrent</p>
-                                <p class="price-old">@item.priceOld</p>
-                            </div>
-                        </a>
-                    </div>
-                }
-            }
-
-        </div>
+        @await Component.InvokeAsync("ProductComponent", new { products = Model.productModels })
         <a href="#" class="c-btn c-btn-white">
             <span>XEM TẤT CẢ XE ĐẠP NỔI BẬT</span>
         </a>
@@ -211,33 +100,7 @@
             <li><a href="#">ÁO - QUẦN</a></li>
             <li><a href="#">DỤNG CỤ</a></li>
         </ul>
-
-        <div class="listproduct listproduct-block owl-carousel">
-            @{
-                foreach (var item in @Model.productModels)
-                {
-                    <div class="item">
-                        <a href="#">
-                            <div class="item-wrap">
-                                <div class="item-label">
-                                    <span class="lb-percent">@item.saleOff</span>
-                                    <span class="lb-tragop">Góp 0%</span>
-                                </div>
-                                <div class="item-img">
-                                    <img src="~/@item.image" alt="ADIDAS Adizero Takumi Sen 7 Tokyo">
-                                </div>
-                            </div>
-                            <h3><span>@item.brandName</span>  @item.name </h3>
-                            <div class="price">
-                                <p class="price-current">@item.priceCurrent</p>
-                                <p class="price-old">@item.priceOld</p>
-                            </div>
-                        </a>
-                    </div>
-                }
-            }
-        </div>
-
+        @await Component.InvokeAsync("ProductComponent", new { products = Model.productModels })
         <a href="#" class="c-btn c-btn-white">
             <span>XEM TẤT CẢ CÁC CHẠY BỘ</span>
         </a>
@@ -284,20 +147,7 @@
                     <span></span>
                     <p>Tìm siêu thị gần bạn</p>
                 </div>
-                <div class="visit__list">
-                    @{
-                        foreach (var item in Model.storeModels)
-                        {
-                            <a asp-action="Detail" asp-controller="Store" asp-route-slug="@item.slug" class="item">
-                                <p class="txt-name">@item.name</p>
-                                <div class="txt-address">
-                                    <p>@item.address</p>
-                                    <span><i class="icon-visitmap"></i></span>
-                                </div>
-                            </a>
-                        }
-                    }
-                </div>
+                @await Component.InvokeAsync("StoreComponent", new { stores = Model.storeModels })
                 <a href="javascript:void(0)" class="visit-btn">
                     <span>XEM THÊM 9 SIÊU THỊ</span>
                 </a>
@@ -306,11 +156,49 @@
     </section>
 </div>
 
+<div class="commitment">
+    <ul>
+        <li>
+            <div class="li-icon">
+                <i class="icon-chinhhang"></i>
+            </div>
+            <div class="li-content">
+                <p class="txt-ttl">Chính hãng 100%</p>
+                <p class="txt-ct">Hơn 100 thương hiệu nổi tiếng</p>
+            </div>
+        </li>
+        <li>
+            <div class="li-icon">
+                <i class="icon-mpgiaohang"></i>
+            </div>
+            <div class="li-content">
+                <p class="txt-ttl">Miễn phí giao hàng</p>
+                <p class="txt-ct">Cho đơn hàng trên 500.000đ</p>
+            </div>
+        </li>
+        <li>
+            <div class="li-icon">
+                <i class="icon-doi1"></i>
+            </div>
+            <div class="li-content">
+                <p class="txt-ttl">1 đổi 1 trong vòng 1 năm</p>
+                <p class="txt-ct">Tại 200 cửa hàng trên toàn quốc</p>
+                <a href="#" class="txt-link">xem chi tiết</a>
+            </div>
+        </li>
+        <li>
+            <div class="li-icon">0%</div>
+            <div class="li-content">
+                <p class="txt-ttl">Trả góp 0%</p>
+                <p class="txt-ct">Qua thẻ hoặc duyệt hồ sơ<br>với mọi sản phẩm trên 1.5 triệu</p>
+            </div>
+        </li>
+    </ul>
+</div>
 
-
-<script src="~/js/jquery.min.js"></script>
-<script src="~/js/owl.carousel.min.js"></script>
-<script src="~/js/common.js"></script>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/owl.carousel.min.js"></script>
+<script src="./js/common.js"></script>
 <script>
     $(document).ready(function () {
         $(".listproduct-promo").owlCarousel({

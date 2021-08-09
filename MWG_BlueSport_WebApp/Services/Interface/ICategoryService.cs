@@ -9,6 +9,6 @@ namespace MWG_BlueSport_WebApp.Services.Category
 {
     public interface ICategoryService
     {
-        public List<CategoryModel> GetAll();
+        public Task<List<CategoryModel>> GetAll();
     }
 }

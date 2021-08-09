@@ -15,26 +15,23 @@ namespace MWG_BlueSport_WebApp.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IBannerService _bannerService;
-        private readonly ICategoryService _categoryService;
         private readonly IStoreService _storeService;
         private readonly IProductService _productService;
 
-        public HomeController(ILogger<HomeController> logger, IBannerService bannerService, IStoreService storeService, IProductService productService, ICategoryService categoryService)
+        public HomeController(ILogger<HomeController> logger, IBannerService bannerService, IStoreService storeService, IProductService productService)
         {
             _logger = logger;
             _bannerService = bannerService;
-            _categoryService = categoryService;
             _productService = productService;
             _storeService = storeService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             HomeViewModel homeViewModel = new HomeViewModel();
-            homeViewModel.bannerModels = _bannerService.GetAll();
-            homeViewModel._categories = _categoryService.GetAll();
-            homeViewModel.storeModels = _storeService.GetAll();
-            homeViewModel.productModels = _productService.GetAll();
+            homeViewModel.bannerModels = await _bannerService.GetAll();
+            homeViewModel.storeModels = await _storeService.GetAll();
+            homeViewModel.productModels = await _productService.GetAll();
             return View(homeViewModel);
         }
 

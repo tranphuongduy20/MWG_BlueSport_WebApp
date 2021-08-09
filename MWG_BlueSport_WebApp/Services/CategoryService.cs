@@ -18,9 +18,9 @@ namespace MWG_BlueSport_WebApp.Services.Category
             _apiName = "category";
             _clientService = clientService;
         }
-        public List<CategoryModel> GetAll()
+        public async Task<List<CategoryModel>> GetAll()
         {
-            var response = _clientService.Get(_apiName);
+            var response = await _clientService.Get(_apiName);
 
             var dataDto = Newtonsoft.Json.JsonConvert.DeserializeObject<List<CategoryModelDTO>>(response.Content);
 
